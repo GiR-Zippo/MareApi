@@ -5,6 +5,9 @@ public class MareAuth
     public const string OAuth = "/oauth";
     public const string Auth = "/auth";
     public const string Auth_CreateIdent = "createWithIdent";
+    public const string Auth_CreateIdentV2 = "createWithIdentV2";
+    public const string Auth_Register = "registerNewKey";
+    public const string Auth_RegisterV2 = "registerNewKeyV2";
     public const string Auth_RenewToken = "renewToken";
     public const string OAuth_GetUIDsBasedOnSecretKeys = "getUIDsViaSecretKey";
     public const string OAuth_CreateOAuth = "createWithOAuth";
@@ -13,7 +16,9 @@ public class MareAuth
     public const string OAuth_GetUIDs = "getUIDs";
     public const string OAuth_GetDiscordOAuthToken = "getDiscordOAuthToken";
     public static Uri AuthFullPath(Uri baseUri) => new Uri(baseUri, Auth + "/" + Auth_CreateIdent);
+    public static Uri AuthV2FullPath(Uri baseUri) => new Uri(baseUri, Auth + "/" + Auth_CreateIdentV2);
     public static Uri AuthWithOauthFullPath(Uri baseUri) => new Uri(baseUri, OAuth + "/" + OAuth_CreateOAuth);
+    public static Uri AuthRegisterV2FullPath(Uri baseUri) => new Uri(baseUri, Auth + "/" + Auth_RegisterV2);
     public static Uri RenewTokenFullPath(Uri baseUri) => new Uri(baseUri, Auth + "/" + Auth_RenewToken);
     public static Uri RenewOAuthTokenFullPath(Uri baseUri) => new Uri(baseUri, OAuth + "/" + OAuth_RenewOAuthToken);
     public static Uri GetUIDsBasedOnSecretKeyFullPath(Uri baseUri) => new Uri(baseUri, OAuth + "/" + OAuth_GetUIDsBasedOnSecretKeys);
