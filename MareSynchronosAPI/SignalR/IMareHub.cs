@@ -64,7 +64,6 @@ public interface IMareHub
 
     Task UserAddPair(UserDto user);
     Task UserDelete();
-    Task<List<OnlineUserIdentDto>> UserGetOnlinePairs();
     Task<List<OnlineUserIdentDto>> UserGetOnlinePairs(CensusDataDto? censusDataDto);
     Task<List<UserFullPairDto>> UserGetPairedClients();
     Task<UserProfileDto> UserGetProfile(UserDto dto);
